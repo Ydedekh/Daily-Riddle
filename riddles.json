@@ -1,0 +1,28 @@
+[
+    {
+        "riddle": "What has to be broken before you can use it?",
+        "answer": "egg",
+        "hint": "It's something found in the kitchen."
+    },
+    {
+        "riddle": "I’m tall when I’m young, and I’m short when I’m old. What am I?",
+        "answer": "candle",
+        "hint": "It provides light but melts over time."
+    },
+    {
+        "riddle": "What can travel around the world while staying in the same spot?",
+        "answer": "stamp",
+        "hint": "It’s small and usually found on envelopes."
+    },
+    {
+        "riddle": "What has an eye but cannot see?",
+        "answer": "needle",
+        "hint": "You use it for sewing."
+    },
+    {
+        "riddle": "What gets wetter the more it dries?",
+        "answer": "towel",
+        "hint": "You use it after taking a bath."
+    }
+]
+

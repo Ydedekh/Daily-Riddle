@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Riddle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        form input {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            margin-bottom: 10px;
+        }
+        form button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            font-size: 16px;
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+        .hint {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Riddle</h1>
+        <p>{{ riddle }}</p>
+        <form method="POST">
+            <input type="text" name="answer" placeholder="Your answer" required>
+            <button type="submit">Submit</button>
+            <button type="submit" name="show_hint" value="1">Show Hint</button>
+        </form>
+        {% if message %}
+        <p class="{{ 'message' if 'Correct' in message else 'error' }}">{{ message }}</p>
+        {% endif %}
+        {% if hint %}
+        <p class="hint">Hint: {{ hint }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
